@@ -72,7 +72,7 @@ function uploadDaily($apiKey, $systemID, $date, $exported, $imported_peak, $impo
 
    $fields = array(
 		'd' => urlencode(date('Ymd', strtotime($date))),
-		//'g' => urlencode('0'), //required if output does not already exist
+		'g' => urlencode($exported), //required if output does not already exist
 		'e' => urlencode($exported),
 		'cm' => urlencode('Imported from MyHomeEnergy'),
 		'ip' => urlencode($imported_peak),
